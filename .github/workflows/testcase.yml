@@ -21,9 +21,4 @@ jobs:
         run:  chmod +x gradlew
       - name: test app
         run:  ./gradlew test
-      - name: Upload artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: storemanager-test-result-${{ matrix.os }}
-          path: build/reports/tests
-
+      
