@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           java-version: 27
+          distribution: microsoft
       - name: chmod gradlew
         run:  chmod +x gradlew
       - name: test app
