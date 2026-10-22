@@ -4,6 +4,7 @@ import io.github.skylinebnr334.Store_BuppanManager.App.Controller.MainController
 import io.github.skylinebnr334.Store_BuppanManager.App.Models.MainModel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MainView extends JFrame {
     // MVC Code
@@ -13,19 +14,25 @@ public class MainView extends JFrame {
 
     //Layout Parts
 
-    private JPanel panel;
-    private JLabel label;
-
+    private JPanel mainpanel;
+    //private JLabel label;
+    private JButton AppRunButton;
+    private JButton SettingButton;
     //end
 
     public MainView(){
 
     }
     public void initComponent(){
-        panel=new JPanel();
-        label=new JLabel("test");
-        panel.add(label);
-        this.add(panel);
+        mainpanel=new JPanel();
+        //label=new JLabel("test");
+        SettingButton=new JButton("Setting");
+        AppRunButton=new JButton("App");
+        //mainpanel.add(label);
+        mainpanel.setLayout(new GridLayout(1,3));
+        mainpanel.add(AppRunButton);
+        mainpanel.add(SettingButton);
+        this.add(mainpanel);
         this.setSize(800,600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
